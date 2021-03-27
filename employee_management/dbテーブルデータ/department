@@ -1,0 +1,58 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.5
+-- https://www.phpmyadmin.net/
+--
+-- ホスト: localhost:8889
+-- 生成日時: 2021 年 3 月 27 日 07:09
+-- サーバのバージョン： 5.7.30
+-- PHP のバージョン: 7.4.9
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- データベース: `zinzi`
+--
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `department`
+--
+
+CREATE TABLE `department` (
+  `department_id` int(11) NOT NULL,
+  `department_name` text NOT NULL,
+  `created` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- テーブルのデータのダンプ `department`
+--
+
+INSERT INTO `department` (`department_id`, `department_name`, `created`) VALUES
+(1, '営業', '2021-03-22 06:25:29'),
+(2, '企画', '2021-03-22 06:26:08'),
+(3, '会計', '2021-03-22 06:27:15'),
+(4, '人事', '2021-03-22 06:27:15'),
+(5, '調達', '0000-00-00 00:00:00');
+
+--
+-- ダンプしたテーブルのインデックス
+--
+
+--
+-- テーブルのインデックス `department`
+--
+ALTER TABLE `department`
+  ADD PRIMARY KEY (`department_id`);
+
+--
+-- ダンプしたテーブルのAUTO_INCREMENT
+--
+
+--
+-- テーブルのAUTO_INCREMENT `department`
+--
+ALTER TABLE `department`
+  MODIFY `department_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
